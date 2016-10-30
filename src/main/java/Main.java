@@ -30,17 +30,23 @@ public class Main {
         //List of terminal operations in the Stream<T> interface
         //forEach, forEachOrdered, toArray, reduce, collect, min, max, count,
 
-        //Perform the forEach terminal operation on the stream
+        //Perform the forEach terminal operation
         printStart("forEach terminal operation");
         models.stream().forEach(car -> System.out.println(car.getColor()));
         System.out.println("_______________________________________");
 
-        //Perform the forEachOrdered terminal operation on the stream
+        //Perform the forEachOrdered terminal operation
         printStart("forEachOrdered terminal operation");
         models.stream().forEachOrdered(car -> System.out.println(car.getColor()));
         System.out.println("_______________________________________");
 
-
+        //Perform the toArray terminal operation
+        printStart("toArray terminal operation");
+        Object[] modelArray = models.stream().toArray();
+        for(Object model : modelArray){
+            System.out.println(((Car)model).getColor());
+        }
+        System.out.println("_______________________________________");
 
 
 
