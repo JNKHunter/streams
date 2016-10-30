@@ -11,6 +11,12 @@ public class Main {
 
     private static final int NUM_OF_CARS = 10;
 
+    private static void printStart(String message){
+        System.out.println("_______________________________________");
+        System.out.println(message);
+        System.out.println("...");
+    }
+
     public static void main(String[] args) {
 
         List<Car> models = new ArrayList<>();
@@ -25,18 +31,18 @@ public class Main {
         //forEach, forEachOrdered, toArray, reduce, collect, min, max, count,
 
         //Perform the forEach terminal operation on the stream
-        System.out.println("_______________________________________");
-        System.out.println("forEach terminal operation");
-        System.out.println("...");
+        printStart("forEach terminal operation");
         models.stream().forEach(car -> System.out.println(car.getColor()));
         System.out.println("_______________________________________");
 
         //Perform the forEachOrdered terminal operation on the stream
-        System.out.println("_______________________________________");
-        System.out.println("forEachOrdered terminal operation");
-        System.out.println("...");
+        printStart("forEachOrdered terminal operation");
         models.stream().forEachOrdered(car -> System.out.println(car.getColor()));
         System.out.println("_______________________________________");
+
+
+
+
 
     }
 }
