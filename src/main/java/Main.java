@@ -13,6 +13,8 @@ public class Main {
     private static final int NUM_OF_CARS = 10;
     private static final int MIN_COST = 1000;
     private static final int MAX_COST = 100000;
+    private static final int MIN_FEE = 10;
+    private static final int MAX_FEE = 10;
 
     private static void printStart(String message) {
         System.out.println("_______________________________________");
@@ -32,7 +34,10 @@ public class Main {
         Random r = new Random();
 
         for (int i = 0; i < NUM_OF_CARS; i++) {
-            models.add(new Car(colorsArray[r.nextInt(5)], getRandomIntBetween(MIN_COST, MAX_COST)));
+            models.add(new Car(colorsArray[r.nextInt(5)],
+                    getRandomIntBetween(MIN_COST, MAX_COST),
+                    getRandomIntBetween()
+                    ));
         }
 
         //List of terminal operations in the Stream<T> interface
@@ -59,9 +64,25 @@ public class Main {
         //Perform the reduce terminal operation
         printStart("reduce terminal operation");
         OptionalInt allCosts = models.stream()
-                .mapToInt(c -> c.getCost())
+                .mapToInt(c -> c.getStickerCost())
                 .reduce((a, b) -> a + b);
         System.out.println("All costs " + allCosts.toString());
         System.out.println("_______________________________________");
+
+        //Perform the min terminal operation
+        printStart("min terminal operation");
+        models.stream().min((c1,c2) -> {
+                if(c1.getTotalCost() > c2.getTotalCost()) {
+                    return 1;
+                }else if (c1.getTotalCost() > c2.getTotalCost()){
+                    return -1;
+                }else{
+                    return 0;
+                }
+            });
+        //TODO print out cheapest car
+
+
+
     }
 }

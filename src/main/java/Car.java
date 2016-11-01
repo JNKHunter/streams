@@ -4,11 +4,21 @@
 public class Car {
 
     private Colors color;
-    private int cost;
+    private int stickerCost;
+    private int fees;
 
-    public Car(Colors color, int cost) {
+    public Car(Colors color, int cost, int fees) {
         this.color = color;
-        this.cost = cost;
+        this.stickerCost = cost;
+        this.fees = fees;
+    }
+
+    public int getFees() {
+        return fees;
+    }
+
+    public void setFees(int fees) {
+        this.fees = fees;
     }
 
     public Colors getColor() {
@@ -19,11 +29,15 @@ public class Car {
         this.color = color;
     }
 
-    public int getCost() {
-        return cost;
+    public int getStickerCost() {
+        return stickerCost;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setStickerCost(int stickerCost) {
+        this.stickerCost = stickerCost;
+    }
+
+    public int getTotalCost(){
+        return this.stickerCost + this.fees;
     }
 }
