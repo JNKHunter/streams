@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ccfb03-efbf-458b-9b13-f079e7aa9fd3" name="Default" comment="``">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Car.java" afterPath="$PROJECT_DIR$/src/main/java/Car.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="streams.iws" />
@@ -665,12 +664,12 @@
       <option name="presentableId" value="Default" />
       <updated>1477787717509</updated>
       <workItem from="1477787718713" duration="1599000" />
-      <workItem from="1477821745541" duration="11487000" />
+      <workItem from="1477821745541" duration="11518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13086000" />
+    <option name="totallyTimeSpent" value="13117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-25" y="23" width="1440" height="877" extended-state="0" />

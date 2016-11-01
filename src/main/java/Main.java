@@ -60,7 +60,7 @@ public class Main {
         printStart("reduce terminal operation");
         OptionalInt allCosts = models.stream()
                 .mapToInt(c -> c.getCost())
-                .reduce((a,b) -> a + b);
+                .reduce((a, b) -> a + b);
         System.out.println("All costs " + allCosts.toString());
         System.out.println("_______________________________________");
     }
