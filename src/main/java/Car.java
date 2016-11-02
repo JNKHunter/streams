@@ -40,4 +40,13 @@ public class Car {
     public int getTotalCost(){
         return this.stickerCost + this.fees;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color=" + color +
+                ", stickerCost=" + stickerCost +
+                ", fees=" + fees +
+                '}';
+    }
 }
