@@ -67,6 +67,8 @@ public class Main {
         System.out.println("All costs " + allCosts.toString());
         System.out.println("_______________________________________");
 
+
+
         //Perform the min terminal operation
         printStart("min terminal operation");
         Optional<Car> min = models.stream().min((c1, c2) -> {
@@ -78,10 +80,27 @@ public class Main {
                 return 0;
             }
         });
-
         System.out.println("Min costs " + min.toString());
         System.out.println("_______________________________________");
 
 
+        //Perform the max terminal operation
+        printStart("max terminal operation");
+        Optional<Car> max = models.stream().max((c1, c2) -> {
+            if (c1.getTotalCost() > c2.getTotalCost()) {
+                return 1;
+            } else if (c1.getTotalCost() > c2.getTotalCost()) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+        System.out.println("Max costs " + max.toString());
+        System.out.println("_______________________________________");
+
+        //Perform the count terminal operation
+        printStart("Count terminal operation");
+        System.out.println("The number of models is: " + models.stream().count());
+        System.out.println("_______________________________________");
     }
 }
